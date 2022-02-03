@@ -1,25 +1,29 @@
-import { AppBar, Box, Toolbar, Typography, Button, IconButton } from '@mui/material';
-import MenuIcon from '@mui/icons-material/Menu';
+import { AppBar, Toolbar, Typography, IconButton } from '@mui/material';
+import QuestionMarkIcon from '@mui/icons-material/QuestionMark';
+import SettingsIcon from '@mui/icons-material/Settings';
+import EqualizerIcon from '@mui/icons-material/Equalizer';
 
 function Header() {
-    return (
-        <AppBar position='static' color='secondary'>
-            <Toolbar>
-                <IconButton
-                    size='large'
-                    edge='start'
-                    color='primary'
-                    aria-label='menu'
-                    sx={{ mr: 2 }}
-                >
-                    <MenuIcon />
-                    {/*  TODO: inserir ícones no header   */}
-                </IconButton>
-                <Typography variant='h6' component='div' sx={{ flexGrow: 1 }}>
-                    Wordle Game
-                </Typography>
-            </Toolbar>
-        </AppBar>
-    );
+  return (
+    <AppBar position="static" color="secondary">
+      <Toolbar>
+        <IconButton size="large" edge="start" color="primary" aria-label="How to play">
+          <QuestionMarkIcon />
+        </IconButton>
+
+        <Typography variant="h5" component="div" sx={{ flexGrow: 1, textAlign: 'center' }}>
+          Wordle Game
+        </Typography>
+
+        <IconButton size="large" edge="start" color="primary" aria-label="Setting" sx={{ mr: 2 }}>
+          <SettingsIcon />
+        </IconButton>
+
+        <IconButton size="large" edge="start" color="primary" aria-label="Statistics">
+          <EqualizerIcon />
+        </IconButton>
+      </Toolbar>
+    </AppBar>
+  );
 }
 export default Header;
