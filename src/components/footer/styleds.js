@@ -1,8 +1,11 @@
 import { styled } from '@mui/material/styles';
-import { Link } from '@mui/material';
+import { Link, Typography } from '@mui/material';
 
 const StyledLink = styled(Link)`
-  text-decoration: none;
   color: inherit;
 `;
-export default StyledLink;
+
+const StyledFooterTypography = styled(Typography)`
+  font-size: 0.8rem;
+`;
+export { StyledLink, StyledFooterTypography };
