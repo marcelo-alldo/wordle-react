@@ -10,7 +10,9 @@ function DefaultLayout({ children }) {
     <>
       <Header />
       <StyledGrid container>
-        <Grid item>
+        {/* TODO: é assim mesmo que faz um 'ofset'? */}
+        <Grid item sm={3} />
+        <Grid item sm={6}>
           <Container>{children}</Container>
         </Grid>
       </StyledGrid>

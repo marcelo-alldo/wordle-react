@@ -2,7 +2,7 @@ import { Toolbar, Typography, IconButton } from '@mui/material';
 import QuestionMarkIcon from '@mui/icons-material/QuestionMark';
 import SettingsIcon from '@mui/icons-material/Settings';
 import EqualizerIcon from '@mui/icons-material/Equalizer';
-import { StyledAppBar } from './styleds';
+import StyledAppBar from './styleds';
 
 function Header() {
   return (
@@ -16,7 +16,17 @@ function Header() {
           Wordle Game
         </Typography>
 
-        <IconButton size="large" edge="start" color="primary" aria-label="Setting" sx={{ mr: 2 }}>
+        <IconButton
+          size="large"
+          edge="start"
+          color="primary"
+          aria-label="Setting"
+          sx={{ mr: 2 }}
+          onClick={() => {
+            window.location.pathname = 'configuration';
+            // TODO: como faria isso da forma correta?
+          }}
+        >
           <SettingsIcon />
         </IconButton>
 
