@@ -1,11 +1,12 @@
-import { AppBar, Toolbar, Typography, IconButton } from '@mui/material';
+import { Toolbar, Typography, IconButton } from '@mui/material';
 import QuestionMarkIcon from '@mui/icons-material/QuestionMark';
 import SettingsIcon from '@mui/icons-material/Settings';
 import EqualizerIcon from '@mui/icons-material/Equalizer';
+import { StyledAppBar } from './styleds';
 
 function Header() {
   return (
-    <AppBar position="static" color="secondary">
+    <StyledAppBar position="static" color="secondary">
       <Toolbar>
         <IconButton size="large" edge="start" color="primary" aria-label="How to play">
           <QuestionMarkIcon />
@@ -23,7 +24,7 @@ function Header() {
           <EqualizerIcon />
         </IconButton>
       </Toolbar>
-    </AppBar>
+    </StyledAppBar>
   );
 }
 export default Header;

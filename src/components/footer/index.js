@@ -5,7 +5,7 @@ import { StyledLink, StyledFooterTypography } from './styleds';
 function Footer() {
   return (
     <Grid container bgcolor="transparentBackground.main" color="white">
-      <Grid item width="100vw" display="flex" justifyContent="center" m={2}>
+      <Grid item xs={12} display="flex" justifyContent="center" m={2}>
         <StyledFooterTypography textAlign="center">
           Projeto desenvolvido pela
         </StyledFooterTypography>
