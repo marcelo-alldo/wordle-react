@@ -2,9 +2,16 @@ import { Toolbar, Typography, IconButton } from '@mui/material';
 import QuestionMarkIcon from '@mui/icons-material/QuestionMark';
 import SettingsIcon from '@mui/icons-material/Settings';
 import EqualizerIcon from '@mui/icons-material/Equalizer';
+import { useNavigate } from 'react-router-dom';
 import StyledAppBar from './styleds';
 
 function Header() {
+  const navigate = useNavigate();
+
+  function handleClick(route) {
+    navigate(`/${route}`);
+  }
+
   return (
     <StyledAppBar position="static" color="secondary">
       <Toolbar>
@@ -12,7 +19,14 @@ function Header() {
           <QuestionMarkIcon />
         </IconButton>
 
-        <Typography variant="h5" component="div" sx={{ flexGrow: 1, textAlign: 'center' }}>
+        <Typography
+          onClick={() => {
+            handleClick('home');
+          }}
+          variant="h5"
+          component="div"
+          sx={{ flexGrow: 1, textAlign: 'center', cursor: 'pointer' }}
+        >
           Wordle Game
         </Typography>
 
@@ -23,8 +37,7 @@ function Header() {
           aria-label="Setting"
           sx={{ mr: 2 }}
           onClick={() => {
-            window.location.pathname = 'configuration';
-            // TODO: como faria isso da forma correta?
+            handleClick('configuration');
           }}
         >
           <SettingsIcon />
