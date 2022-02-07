@@ -11,17 +11,17 @@ import Routes from './routes';
 import DefaultLayout from './config/layout/Default';
 
 function App() {
-    const Layout = DefaultLayout;
-    return (
-        <Provider store={store}>
-            <ThemeProvider theme={theme}>
-                <CssBaseline />
-                <Layout>
-                    <Routes />
-                </Layout>
-            </ThemeProvider>
-        </Provider>
-    );
+  const Layout = DefaultLayout;
+  return (
+    <Provider store={store}>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <Layout>
+          <Routes />
+        </Layout>
+      </ThemeProvider>
+    </Provider>
+  );
 }
 
 export default App;

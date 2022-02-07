@@ -15,7 +15,15 @@ function Header() {
   return (
     <StyledAppBar position="static" color="secondary">
       <Toolbar>
-        <IconButton size="large" edge="start" color="primary" aria-label="How to play">
+        <IconButton
+          size="large"
+          edge="start"
+          color="primary"
+          aria-label="How to play"
+          onClick={() => {
+            handleClick('instruction');
+          }}
+        >
           <QuestionMarkIcon />
         </IconButton>
 
