@@ -1,8 +1,8 @@
 import { Grid, Container, Box } from '@mui/material';
-import TitleSubPage from '../../components/title-subpage/TitleSubPage';
-import SubPageItem from '../../components/subpage-item/SubPage-Item';
-import SubPageSubItem from '../../components/subpage-subitem/SubPage-Item';
-import DividerWithMargin from '../../components/divider/Divider';
+import TitleSubPage from '../../components/shared-components/title-subpage/TitleSubPage';
+import SubPageItem from '../../components/shared-components/subpage-item/SubPage-Item';
+import SubPageSubItem from '../../components/shared-components/subpage-subitem/SubPage-Item';
+import DividerWithMargin from '../../components/shared-components/divider/Divider';
 import IosSwitch from '../../components/ios-switch/iOS-Switch';
 import FlexBox from '../../components/flex-box/Flex-Box';
 

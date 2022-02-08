@@ -9,7 +9,7 @@ function DefaultLayout({ children }) {
   return (
     <>
       <Header />
-      <StyledGrid container>
+      <StyledGrid item container sx={{ height: '100%' }}>
         {/* TODO: é assim mesmo que faz um 'ofset'? */}
         <Grid item sm={3} />
         <Grid item sm={6}>

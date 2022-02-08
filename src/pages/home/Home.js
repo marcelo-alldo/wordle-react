@@ -1,54 +1,21 @@
 import { Grid } from '@mui/material';
 import GameTile from '../../components/game-tile/Game-Tile';
-import StyledFlexBox from '../../components/game-tile/styleds';
-// import
+import { StyledFlexBox } from '../../components/game-tile/styleds';
 
 function Home() {
+  const lettersQntd = [1, 2, 3, 4, 5];
+  const rowsQntd = [1, 2, 3, 4, 5, 6];
+
   return (
     <Grid container>
       <Grid item xs={12}>
-        <StyledFlexBox>
-          <GameTile />
-          <GameTile />
-          <GameTile />
-          <GameTile />
-          <GameTile />
-        </StyledFlexBox>
-        <StyledFlexBox>
-          <GameTile />
-          <GameTile />
-          <GameTile />
-          <GameTile />
-          <GameTile />
-        </StyledFlexBox>
-        <StyledFlexBox>
-          <GameTile />
-          <GameTile />
-          <GameTile />
-          <GameTile />
-          <GameTile />
-        </StyledFlexBox>
-        <StyledFlexBox>
-          <GameTile />
-          <GameTile />
-          <GameTile />
-          <GameTile />
-          <GameTile />
-        </StyledFlexBox>
-        <StyledFlexBox>
-          <GameTile />
-          <GameTile />
-          <GameTile />
-          <GameTile />
-          <GameTile />
-        </StyledFlexBox>
-        <StyledFlexBox>
-          <GameTile />
-          <GameTile />
-          <GameTile />
-          <GameTile />
-          <GameTile />
-        </StyledFlexBox>
+        {rowsQntd.map((row, index) => (
+          <StyledFlexBox key={rowsQntd.toString()}>
+            {lettersQntd.map((letter, i) => (
+              <GameTile key={lettersQntd.toString()} />
+            ))}
+          </StyledFlexBox>
+        ))}
       </Grid>
     </Grid>
   );
