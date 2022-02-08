@@ -10,9 +10,9 @@ function Home() {
     <Grid container>
       <Grid item xs={12}>
         {rowsQntd.map((row, index) => (
-          <StyledFlexBox key={rowsQntd.toString()}>
+          <StyledFlexBox key={index}>
             {lettersQntd.map((letter, i) => (
-              <GameTile key={lettersQntd.toString()} />
+              <GameTile key={i} />
             ))}
           </StyledFlexBox>
         ))}

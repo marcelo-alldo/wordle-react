@@ -4,36 +4,41 @@ import { StyledLink, StyledFooterTypography } from './styleds';
 
 function Footer() {
   return (
-    <Grid container bgcolor="transparentBackground.main" color="white" mt={4}>
-      <Grid item xs={12} display="flex" justifyContent="center" m={2}>
-        <StyledFooterTypography textAlign="center">
-          Projeto desenvolvido pela
+    <Grid
+      item
+      bgcolor="transparentBackground.main"
+      color="white"
+      xs={1}
+      display="flex"
+      justifyContent="center"
+      alignItems="center"
+      sx={{ maxHeight: '50px', minHeight: '50px', width: '100vw' }}
+    >
+      <StyledFooterTypography textAlign="center">Projeto desenvolvido pela</StyledFooterTypography>
+
+      <StyledLink
+        href="https://www.growdev.com.br/"
+        target="_blank"
+        rel="noopener"
+        underline="hover"
+      >
+        <StyledFooterTypography ml={0.5} mr={0.5}>
+          Growdev
         </StyledFooterTypography>
+      </StyledLink>
 
-        <StyledLink
-          href="https://www.growdev.com.br/"
-          target="_blank"
-          rel="noopener"
-          underline="hover"
-        >
-          <StyledFooterTypography ml={0.5} mr={0.5}>
-            Growdev
-          </StyledFooterTypography>
-        </StyledLink>
+      <StyledFooterTypography textAlign="center">para prática de React.</StyledFooterTypography>
 
-        <StyledFooterTypography textAlign="center">para prática de React.</StyledFooterTypography>
-
-        <StyledLink
-          href="https://github.com/marcelo-growdev/wordle-react"
-          target="_blank"
-          rel="noopener"
-          underline="hover"
-        >
-          <StyledFooterTypography ml={1} mt={-0.25}>
-            <GitHubIcon fontSize="small" />
-          </StyledFooterTypography>
-        </StyledLink>
-      </Grid>
+      <StyledLink
+        href="https://github.com/marcelo-growdev/wordle-react"
+        target="_blank"
+        rel="noopener"
+        underline="hover"
+      >
+        <StyledFooterTypography ml={1} mt={-0.25}>
+          <GitHubIcon fontSize="small" />
+        </StyledFooterTypography>
+      </StyledLink>
     </Grid>
   );
 }

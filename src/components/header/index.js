@@ -1,4 +1,4 @@
-import { Toolbar, Typography, IconButton } from '@mui/material';
+import { Toolbar, Typography, IconButton, Grid } from '@mui/material';
 import QuestionMarkIcon from '@mui/icons-material/QuestionMark';
 import SettingsIcon from '@mui/icons-material/Settings';
 import EqualizerIcon from '@mui/icons-material/Equalizer';
@@ -13,49 +13,51 @@ function Header() {
   }
 
   return (
-    <StyledAppBar position="static" color="secondary">
-      <Toolbar>
-        <IconButton
-          size="large"
-          edge="start"
-          color="primary"
-          aria-label="How to play"
-          onClick={() => {
-            handleClick('instruction');
-          }}
-        >
-          <QuestionMarkIcon />
-        </IconButton>
+    <Grid item xs={1} sx={{ width: '100vw' }}>
+      <StyledAppBar position="static" color="secondary">
+        <Toolbar>
+          <IconButton
+            size="large"
+            edge="start"
+            color="primary"
+            aria-label="How to play"
+            onClick={() => {
+              handleClick('instruction');
+            }}
+          >
+            <QuestionMarkIcon />
+          </IconButton>
 
-        <Typography
-          onClick={() => {
-            handleClick('home');
-          }}
-          variant="h5"
-          component="div"
-          sx={{ flexGrow: 1, textAlign: 'center', cursor: 'pointer' }}
-        >
-          Wordle Game
-        </Typography>
+          <Typography
+            onClick={() => {
+              handleClick('home');
+            }}
+            variant="h5"
+            component="div"
+            sx={{ flexGrow: 1, textAlign: 'center', cursor: 'pointer' }}
+          >
+            Wordle Game
+          </Typography>
 
-        <IconButton
-          size="large"
-          edge="start"
-          color="primary"
-          aria-label="Setting"
-          sx={{ mr: 2 }}
-          onClick={() => {
-            handleClick('configuration');
-          }}
-        >
-          <SettingsIcon />
-        </IconButton>
+          <IconButton
+            size="large"
+            edge="start"
+            color="primary"
+            aria-label="Setting"
+            sx={{ mr: 2 }}
+            onClick={() => {
+              handleClick('configuration');
+            }}
+          >
+            <SettingsIcon />
+          </IconButton>
 
-        <IconButton size="large" edge="start" color="primary" aria-label="Statistics">
-          <EqualizerIcon />
-        </IconButton>
-      </Toolbar>
-    </StyledAppBar>
+          <IconButton size="large" edge="start" color="primary" aria-label="Statistics">
+            <EqualizerIcon />
+          </IconButton>
+        </Toolbar>
+      </StyledAppBar>
+    </Grid>
   );
 }
 export default Header;
