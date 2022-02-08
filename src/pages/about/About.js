@@ -1,5 +1,5 @@
 import { Grid } from '@mui/material';
-import TitlePage from '../../components/title-page/TitlePage';
+import TitlePage from '../../components/shared-components/title-page/TitlePage';
 
 function About() {
   return (
